@@ -41,7 +41,7 @@ All songs are **source-separated** and **segmented into utterances**. The uttera
 ```
 $muljam_path
 ├── train
-├── valid[tokenizer.py](..%2FMIR-Benchmark%2Fbenchmark%2Ftasks%2FALT%2Ftokenizer.py)
+├── valid
 $dali_path
 ├── train
 ├── valid
