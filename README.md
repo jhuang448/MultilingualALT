@@ -28,7 +28,7 @@ pip install -r requirements.txt
 
 The **DALI v2** and **MulJam v1** are used for training in this work. The **MultiLang Jamendo v1** is used for evaluation
 
-See instructions on how to get the datasets: 
+See instructions on how to get the latest versions of the datasets: 
 
 DALI v2: [https://github.com/gabolsgabs/DALI](https://github.com/gabolsgabs/DALI). 
 
@@ -48,19 +48,17 @@ $dali_path
 jamendolyrics
 ├── ...
 ```
+We provide another repository that handles the preprocessing for lyrics transcription: [https://github.com/jhuang448/ALT-Preprocess/](https://github.com/jhuang448/ALT-Preprocess/)
 
-Notes on version changes of the datasets: 
-1. In the paper we were using the MulJam v1 version. MulJam v2 is slightly different in the train/valid split. 
-MulJam v2 is recommended as it removes overlap songs in MultiLang Jamendo.
-2. One song from the MultiLang Jamendo dataset has been removed from the official repository.
+A few notes on version changes of the datasets: 
+1. MulJam: In the paper we were using the MulJam v1 version. MulJam v2 is slightly different in the train/valid split. 
+MulJam v2 is recommended as it removes overlapping songs in MultiLang Jamendo.
+2. MultiLang Jamendo: One song from the MultiLang Jamendo v1 dataset has been removed from the official repository to form v1.1.
 3. We will report the results on the MultiLang Jamendo v1.1, training with DALI v2 and MulJam v2 for future reference.
 
 ### Data splits
 
-Data splits are placed under **./data/**, in the speechbrain style. 
-
-
-[training splits are not released yet.]
+Data splits are placed under **./data/**, in the speechbrain style.
 
 ### Tokenizers
 
@@ -100,8 +98,8 @@ python train_mix.py hparams/lang/mel_fr.yaml --muljam_data_folder $muljam_path -
 
 [2] Xiaoxue Gao, Chitralekha Gupta and Haizhou Li. "PoLyScriber: Integrated Fine-Tuning of Extractor and Lyrics Transcriber for Polyphonic Music." IEEE/ACM Transactions on Audio, Speech, and Language Processing, Vol 31, pp. 1968-1981, 2023.
 
-[3] Yuan, Ruibin, Yinghao Ma, Yizhi Li, Ge Zhang, Xingran Chen, Hanzhi Yin, Yiqi Liu et al. "MARBLE: Music audio representation benchmark for universal evaluation." Advances in Neural Information Processing Systems 36: Annual Conference on Neural Information Processing Systems 2023, NeurIPS 2023, New Orleans, LA, USA, December 10 - 16, 2023.
+Ruibin Yuan, Yinghao Ma, Yizhi Li, Ge Zhang, Xingran Chen, Hanzhi Yin, Yiqi Liu et al. "MARBLE: Music audio representation benchmark for universal evaluation." Advances in Neural Information Processing Systems 36: Annual Conference on Neural Information Processing Systems 2023, NeurIPS 2023, New Orleans, LA, USA, December 10 - 16, 2023.
 
-[4] Ou, Longshen, Xiangming Gu, and Ye Wang. "Transfer learning of wav2vec 2.0 for automatic lyric transcription." Proceedings of the 23rd International Society for Music Information Retrieval Conference, {ISMIR} 2022, Bengaluru, India, December 4-8, 2022.
+[4] Longshen Ou, Xiangming Gu, and Ye Wang. "Transfer learning of wav2vec 2.0 for automatic lyric transcription." Proceedings of the 23rd International Society for Music Information Retrieval Conference, {ISMIR} 2022, Bengaluru, India, December 4-8, 2022.
 
 [//]: # (## Cite this work)
